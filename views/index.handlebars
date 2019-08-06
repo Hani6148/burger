@@ -1,0 +1,52 @@
+
+
+    <div class="container main">
+        <div class="row">
+            <div class="col-4 navigation-bar">
+                    <br>
+                    <br>
+                <h1 class="text-center align-middle">DAT</h1>
+               
+            </div>
+            <div class="col-4 navigation-bar">
+               <img src="assets/img/burger.png" width="250px" height="200px" alt="">
+            </div>
+            <div class="col-4 navigation-bar">
+                <br>
+                <br>
+
+                <h1 class="text-center align-middle">Burger</h1>
+            </div>
+        </div>
+        <div class="row">
+         <br>
+         <br>
+         <br>
+       <div class="burger-center"> <h4>Enter burger name:</h4> <input class="burger-input"  type="text"><button type="button" class="btn btn-info add-burger">OK</button></div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-6">
+                
+               <h1>Ordered</h1> 
+               {{#each burger}}
+                {{#unless devour}}
+                  <h5><button type="button" class="btn btn-danger devour" id={{id}}>devour</button> {{id}}:{{burger_name}}</h5>
+                {{/unless}}
+                {{/each}}
+            </div>
+            <div class="col-6">
+                <h1>Devoured</h1> 
+               {{#each burger}}
+                {{#if devour}}
+                  <h5><button type="button" class="btn btn-success throw" id={{id}}>Throw-it</button> {{id}}:{{burger_name}}</h5>
+                {{/if}}
+                {{/each}}
+
+            </div>
+            
+        </div>
+
+    </div>
